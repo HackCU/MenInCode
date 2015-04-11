@@ -1,3 +1,26 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#intro-description-container  {
+    background-color: black;
+    opacity: .5;
+}
+
+#submit-stuff-container  {
+    background: rgba(255, 255, 255, .45);
+}
+
+#submit-stuff-content {
+    padding: 30px;
+    color: rgba(0,0,0,1);
+    font-size: 30px;
+}
+
+#intro-description-content {
+    font-size: 35px;
+    margin: 0 auto;
+    width: 83%;
+    color: white;
+    padding: 20px;
+    }
+
