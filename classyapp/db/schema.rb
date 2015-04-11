@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411123329) do
+ActiveRecord::Schema.define(version: 20150411132340) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer  "course_id"
@@ -30,6 +30,26 @@ ActiveRecord::Schema.define(version: 20150411123329) do
   end
 
   add_index "courses", ["school_id"], name: "index_courses_on_school_id"
+
+  create_table "highlights", force: :cascade do |t|
+    t.integer  "assignment_id"
+    t.string   "text"
+    t.integer  "upvotes"
+    t.integer  "downvotes"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "highlights", ["assignment_id"], name: "index_highlights_on_assignment_id"
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "assignment_id"
+    t.string   "text"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "messages", ["assignment_id"], name: "index_messages_on_assignment_id"
 
   create_table "schools", force: :cascade do |t|
     t.string   "short"
