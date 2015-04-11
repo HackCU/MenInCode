@@ -20,7 +20,8 @@ class AssignmentsController < ApplicationController
 	def create
 		@school = School.find(params.require(:school_id) )
 		@course = Course.find(params.require(:course_id) )
-		@ass = Assignment.find_or_create_by(ass_params)
+		@ass = Assignment.where(:course_id => params[:course_id], :name => params[:assignment][:name]).first_or_create
+	#	@ass = Assignment.find_or_create_by(ass_params, params[:course_id])
 		redirect_to [@school, @course, @ass]
 		#redirect_to [@school, @course, @ass]
 	end
