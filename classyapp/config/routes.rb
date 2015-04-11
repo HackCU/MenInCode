@@ -10,12 +10,12 @@ Rails.application.routes.draw do
 	resources :schools, path: ''
 
 	resources :schools, path: '' do
-		resources :classes, path: ''
+		resources :courses, path: ''
 	end
 
 
 	resources :schools, path: '' do
-		resources :classes, path: '' do
+		resources :courses, path: '' do
 			resources :assignments, path: ''
 		end
 	end

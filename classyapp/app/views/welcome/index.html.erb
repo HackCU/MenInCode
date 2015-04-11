@@ -9,17 +9,22 @@
 <div id="submit-stuff-container">
     <div id="submit-stuff-content">
 <p> To begin, enter school abbreviation and city </p>
-<%= form_for :school do |f| %>
+<%= form_for :school, url: schools_path do |f| %>
   <p>
     <%= f.label :school %><br>
-    <%= f.text_field :school %>
+    <%= f.text_field :short %>
   </p>
- 
+
   <p>
-    <%= f.label :class %><br>
-    <%= f.text_field :class %>
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
   </p>
- 
+
+  <p>
+    <%= f.label :course %><br>
+    <%= f.text_field :name %>
+  </p>
+
   <p>
     <%= f.submit 'Enter'%>
   </p>
