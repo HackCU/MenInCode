@@ -1,3 +1,75 @@
-// Place all the styles related to the courses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#h3 {
+
+    margin: 0px;
+
+}
+
+
+
+#SchoolNameCourseTitle    {
+
+    margin: 0px;
+    padding: 0px;
+    font-family: AlexandriaFLF;
+    font-size: 30px;
+    color: #140029;
+    float: left;
+}
+
+#CourseNameCourseTitle    {
+
+     margin: 0px;
+    padding: 0px;
+    font-family: AlexandriaFLF;
+    font-size: 30px;
+    color: #5C007A;
+    float: left;
+}
+
+
+#CourseTitles{
+    height: 60px;
+    width: 625px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.AssignmentElement {
+
+    font-family: AlexandriaFLF;
+    font-size: 22px;
+    padding: 7px;
+    margin-left: 220px;
+    color: white;
+}
+#AssignmentsContainer {
+
+    background: rgba(0, 0, 0, .45);
+    width: 700px;
+    height: 400px;
+    margin-left: 360px;
+    overflow-y: scroll;
+}
+
+#NewAssignmentLink {
+    
+     font-family: AlexandriaFLF;
+    font-size: 26px;
+    color: #5C007A;
+    margin-left: 10px;
+}
+
+
+
+#NewAssignmentLinkBack {
+    height: 50px;
+    width: 270px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 555px;
+    margin-top: 40px;
+    background-color: white;
+}
