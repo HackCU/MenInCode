@@ -1,16 +1,13 @@
 h1 {
-    color: navy;
-        margin-left: 20px;
+	color: navy;
+	margin-left: 20px;
 }
 
 body {
-    background-image: url("/images/colorPNGs/color19.png");
-     -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-           background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: 100%;
+}
 
+html { 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
