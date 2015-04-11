@@ -9,6 +9,8 @@ class SchoolsController < ApplicationController
 	end
 
 	def new
+		@school = School.new
+		@course = Course.new
 	end
 
 	def edit
@@ -17,7 +19,7 @@ class SchoolsController < ApplicationController
 	def create
 		@school = School.find_or_create_by(school_params)
 		@course = Course.find_or_create_by(class_params)
-		redirect_to school_path
+		redirect_to [@school, @course]
 	end
 
 	def update
@@ -32,7 +34,7 @@ class SchoolsController < ApplicationController
 		end
 
 		def class_params
-			params.require(:school).permit(:course)
+			params.require(:school).permit(:name)
 		end
 
 end
