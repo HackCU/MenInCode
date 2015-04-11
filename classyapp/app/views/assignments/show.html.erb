@@ -1,13 +1,10 @@
-<ul>
-	<li> <%= @school.short+"-"+@school.city %> </li>
-	<li> <%= @course.name %> </li>
-	<li> <%= @ass.name %> </li>
+<ul id = "AssTitles">
+	<li><h3 id = "SchoolNameAssTitle"> <%= @school.short+"-"+@school.city %> > </h3> </li>
+	<li><h3 id = "CourseNameAssTitle"> <%= @course.name %> > </h3></li>
+	<li><h3 id = "AssignmentNameAssTitle"><%= @ass.name %></h3> </li>
 </ul>
 
-<div id="ass-spotlight-container">
 
-</div>
-<div id="ass-chat-container">
 	<%= form_for :message do |f| %>
 	  <p>
 		<%= f.label :text %><br>
@@ -17,4 +14,3 @@
 		<%= f.submit 'Send' %>
 	  </p>
 	<% end %>
-</div>
