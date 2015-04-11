@@ -1,20 +1,32 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
 #intro-description-container  {
     background-color: black;
     opacity: .5;
+    
 }
+
 
 #submit-stuff-container  {
     background: rgba(255, 255, 255, .45);
+    width: 700px;
+    float: left;
+    margin-left:37px;
 }
 
 #submit-stuff-content {
     font-family: comicsanms;
     padding: 30px;
     color: rgba(0,0,0,1);
-    font-size: 30px;
+    font-family: AlexandriaFLF;
+    font-size: 23px;
+    height: 400px;
+    
 }
 
 #intro-description-content {
@@ -27,3 +39,18 @@
     padding-left: 15%;
     }
 
+#side-bar-container {
+    background-color: rgba(0,0,0,0.4);
+    height: 460px;
+    width: 800px;
+    float: left;
+}
+
+#side-bar-content {
+
+    padding: 15px;
+    color: rgba(214, 174, 255,1);
+    font-family: AlexandriaFLF;
+    font-size: 35px;
+
+}

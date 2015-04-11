@@ -1,12 +1,61 @@
+
+
+
+
 // Place all the styles related to the assignments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#ass-spotlight-container #ass-chat-container {
-	background: red;
-	margin: 0;
-	width: 49%;
-	float: left;
+
+
+ul {
+    list-style: none;
 }
+
+#h3 {
+
+    margin:0px;
+}
+
+#SchoolNameAssTitle    {
+
+    margin: 0px;
+    padding: 0px;
+    font-family: AlexandriaFLF;
+    font-size: 30px;
+    color: #140029;
+    float: left;
+}
+
+#CourseNameAssTitle    {
+
+     margin: 0px;
+    padding: 0px;
+    font-family: AlexandriaFLF;
+    font-size: 30px;
+    color: #5C007A;
+    float: left;
+}
+
+#AssignmentNameAssTitle    {
+
+     margin: 0px;
+    padding: 0px;
+    font-family: AlexandriaFLF;
+    font-size: 30px;
+    color: #A319D1;
+    float: left;
+}
+
+#AssTitles{
+    height: 60px;    
+    width: 625px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
 
 
