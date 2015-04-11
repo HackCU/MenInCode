@@ -5,7 +5,9 @@ class CoursesController < ApplicationController
 	end
 
 	def show
-        @ass = Assignment.find_by_course_id(params[:id])
+        @ass = Assignment.where(course_id: params[:id])
+		@course = Course.find(params[:id])
+		@school = School.find(params[:school_id])
 	end
 
 	def new
@@ -16,13 +18,6 @@ class CoursesController < ApplicationController
 	end
 
 	def create
-        @ass = Assignment.new(ass_params)
-
-        if @ass.save
-            redirect_to @ass
-        else
-            render 'new'
-        end
 	end
 
     
