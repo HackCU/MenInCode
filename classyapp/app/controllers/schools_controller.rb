@@ -1,11 +1,10 @@
 class SchoolsController < ApplicationController
 
 	def index
-		@school = School.new
-		@course = Course.new
 	end
 
 	def show
+		@school = School.find(params[:id])
 	end
 
 	def new

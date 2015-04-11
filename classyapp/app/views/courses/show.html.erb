@@ -1,1 +1,15 @@
-<p> hello from courses!!!!!! </p>
+<h1> Listing Assignments </h1>
+
+<table>
+    <tr>
+        <th> Name </th>
+    </tr>
+
+	<% if @ass %>
+		<% @ass.each do |a| %>
+			<tr>
+				<td><%= a.title %></td>
+			</tr>
+		<% end %>
+	<% end %>
+</table>

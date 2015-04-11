@@ -1,25 +1,25 @@
 class CoursesController < ApplicationController
 
 	def index
-		@assignemnts = Assignment.all
+		@ass = Assignment.all
 	end
 
 	def show
-        @assignment = Assignment.find(params[:id])
+        @ass = Assignment.find_by_course_id(params[:id])
 	end
 
 	def new
-        @assignment = Assignment.new
+        @ass = Assignment.new
 	end
 
 	def edit
 	end
 
 	def create
-        @assignment = Assignment.new(assignment_params)
+        @ass = Assignment.new(ass_params)
 
-        if @assignment.save
-            redirect_to @assignment
+        if @ass.save
+            redirect_to @ass
         else
             render 'new'
         end
@@ -34,7 +34,7 @@ class CoursesController < ApplicationController
 	end
 
     private
-        def assignment_params
+        def ass_params
             params.require(:assignment).permit(:name)
         end
 end
