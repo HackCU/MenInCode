@@ -1,0 +1,16 @@
+<p> To begin, enter school abbreviation and city </p>
+<%= form_for :school do |f| %>
+  <p>
+    <%= f.label :school %><br>
+    <%= f.text_field :school %>
+  </p>
+ 
+  <p>
+    <%= f.label :class %><br>
+    <%= f.text_field :class %>
+  </p>
+ 
+  <p>
+    <%= f.submit 'Enter'%>
+  </p>
+<% end %>
