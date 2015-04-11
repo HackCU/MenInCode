@@ -3,7 +3,6 @@ h2 {
     font-size : 60px;
     display: inline;
 }
-
 body {
     margin:0;
     padding:0;
@@ -13,16 +12,15 @@ body {
     min-height:100%;
     position:relative;
 }
+
 #header {
     background:#FFF;
-    opacity: .5; 
+    opacity: 1; 
     padding:0px;
 }
 #header-content {
-
-    position: relative;
-    bottom: 0px;
-
+    width: 50%;
+    margin: 0 auto;
 }
 
 #content {
@@ -39,12 +37,34 @@ body {
     left:0;
 }
 
+#footer-content {
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    opacity: 1.0;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    font-size: 12px;
+}
+
+#footer-links li
+{
+    list-style: none;
+    float: left;
+    width: 200px;
+    clear: none;
+
+}
+
 
 
 .bowtie {
+    opacity: 1;
     display:inline;
-    height: 100px;
+    height: 40px;
+    margin-top: 15px;
     width: 100px;
+
 }
 
 #tieone {
@@ -62,3 +82,12 @@ html {
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
+
+
+svg {
+
+    opacity: 1;
+}
+
+
+
