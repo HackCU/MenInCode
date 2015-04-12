@@ -50,4 +50,4 @@ group :development, :test do
   gem 'spring'
 end
 gem 'rails_12factor', group: :production
-ruby "2.0.0p481"
+ruby "2.0.0"
