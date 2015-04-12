@@ -7,20 +7,11 @@ a:hover{
 
     color: rgba(180, 140, 255,1);
 }
-
-#h3 {
-
-    margin: 0px;
-
-}
-
-
-
 #SchoolNameCourseTitle    {
 
     margin: 0px;
     padding: 0px;
-    font-family: AlexandriaFLF;
+    font-family: NexaLight;
     font-size: 30px;
     color: #140029;
     float: left;
@@ -30,7 +21,7 @@ a:hover{
 
      margin: 0px;
     padding: 0px;
-    font-family: AlexandriaFLF;
+    font-family: NexaLight;
     font-size: 30px;
     color: #5C007A;
     float: left;
@@ -39,30 +30,31 @@ a:hover{
 
 #CourseTitles{
     height: 60px;
-    width: 625px;
-    padding-top: 0px;
-    margin-top: 0px;
-    margin-left:auto;
-    margin-right: auto;
+    width: 425px;
 
 }
 
 .AssignmentElement {
 
-    font-family: AlexandriaFLF;
+    font-family: NexaLight;
     font-size: 22px;
     padding: 11px;
     margin-left: 190px;
-    font-color: white;
-    color: white;
+    color: black;
 }
-#AssignmentsContainer {
 
-    background: rgba(0, 0, 0, .45);
-    width: 700px;
-    height: 300px;
-    margin-left: 360px;
+
+#AssignmentsContainer {
+background: rgba(255, 255, 255, .35);
+width: 700px;
+float: left;
+margin-left:37px;
 }
+
+
+
+
+
 #links {
 
     width: 700px;
@@ -74,7 +66,7 @@ a:hover{
 
 #NewAssignmentLink {
     
-     font-family: AlexandriaFLF;
+     font-family: NexaLight;
     font-size: 26px;
     color: #5C007A;
     margin-left: 10px;
@@ -83,11 +75,11 @@ a:hover{
 
 
 #NewAssignmentLinkBack {
-    height: 50px;
+    
+    margin-top: 290px;
+    height: 35px;
+    float: left;
     width: 270px;
-    padding-left: 20px;
-    padding-top: 20px;
-    margin-left: 555px;
-    margin-top: 40px;
+    padding-left: 0px;
     background-color: white;
 }

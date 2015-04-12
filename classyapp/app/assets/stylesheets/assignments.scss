@@ -7,6 +7,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
+
+
 .input_box_assignment { 
 width: 390px; 
 height: 40px; 
@@ -15,20 +19,18 @@ border: 1px solid purple;
 
 
 #SubmitAssignmentContainer{
-
-
-background: rgba(0, 0, 0, .45);
-width: 700px;
-height: 400px;
-margin-left: 360px;
-overflow-y: scroll;
+    background: rgba(255, 255, 255, .45);
+    width: 700px;
+    float: left;
+    margin-left:37px;
 }
+
 
 
 #SubmitAssignmentContent{
 
 
-color: white;
+color: #a078ff;
 width: 700px;
 height: 400px;
 margin-left: 100px;

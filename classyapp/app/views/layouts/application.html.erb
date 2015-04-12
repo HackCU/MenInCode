@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<div id ="GRADIENT">
-    <a href ="/"> <img id = "logo" src ="/images/logo/wsc.svg"></img> </a>
-    
-    <div id ="intro-description-content">
-            <p> Chat with your classmates - Connect and Colloborate - Create a Community  <p>
-    </div>
-
-<html style="background-image: url(/images/bgs/black.png);">
 <head>
   <title>We So Classy</title>
   <link rel="stylesheet" type="text/css" href="/css/layout.css">
@@ -15,10 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
-<div id="container">
-        
+<html style="background-image: url(/images/bgs/black.png);">
+<div id ="GRADIENT">
 
+   <body>
+ <a href ="/"> <img id = "logo" src ="/images/logo/wsc.svg"></img> </a>
+    <p id = "intro-description-content"> Chat with your classmates - Connect and Colloborate - Create a Community  </p>
+
+<!-- <div id="container"> -->
         <div id="content">
             <%= yield%>
         </div><!-- #content -->
