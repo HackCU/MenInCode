@@ -1,0 +1,129 @@
+/* line 11, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/assignments.scss */
+ul {
+  list-style: none;
+}
+
+/* line 15, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/assignments.scss */
+#h3 {
+  margin: 0px;
+}
+
+/* line 20, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/assignments.scss */
+#SchoolNameAssTitle {
+  margin: 0px;
+  padding: 0px;
+  font-family: AlexandriaFLF;
+  font-size: 30px;
+  color: #140029;
+  float: left;
+}
+
+/* line 30, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/assignments.scss */
+#CourseNameAssTitle {
+  margin: 0px;
+  padding: 0px;
+  font-family: AlexandriaFLF;
+  font-size: 30px;
+  color: #5C007A;
+  float: left;
+}
+
+/* line 40, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/assignments.scss */
+#AssignmentNameAssTitle {
+  margin: 0px;
+  padding: 0px;
+  font-family: AlexandriaFLF;
+  font-size: 30px;
+  color: #A319D1;
+  float: left;
+}
+
+/* line 50, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/assignments.scss */
+#AssTitles {
+  height: 60px;
+  width: 625px;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 7, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/welcome.scss */
+input {
+  font-family: AlexandriaFLF;
+  font-size: 15px;
+  color: purple;
+  border: 5px solid white;
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 0;
+}
+
+/* line 29, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/welcome.scss */
+#intro-description-container {
+  background-color: black;
+  opacity: .5;
+}
+
+/* line 36, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/welcome.scss */
+#submit-stuff-container {
+  background: rgba(255, 255, 255, 0.45);
+  width: 700px;
+  float: left;
+  margin-left: 37px;
+}
+
+/* line 43, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/welcome.scss */
+#submit-stuff-content {
+  font-family: comicsanms;
+  padding: 30px;
+  color: black;
+  font-family: AlexandriaFLF;
+  font-size: 23px;
+  height: 400px;
+}
+
+/* line 53, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/welcome.scss */
+#intro-description-content {
+  font-size: 30px;
+  font-family: AlexandriaFLF;
+  margin: 0 auto;
+  width: 83%;
+  color: white;
+  padding: 10px;
+  padding-left: 15%;
+}
+
+/* line 63, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/welcome.scss */
+#side-bar-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 460px;
+  width: 800px;
+  float: left;
+}
+
+/* line 70, /Users/smc/hackcu/MenInCode/classyapp/app/assets/stylesheets/welcome.scss */
+#side-bar-content {
+  padding: 15px;
+  color: #d6aeff;
+  font-family: AlexandriaFLF;
+  font-size: 35px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

@@ -5,6 +5,7 @@ class CoursesController < ApplicationController
 	end
 
 	def show
+		#binding.pry
         @ass = Assignment.where(course_id: params[:id])
 		@course = Course.find(params[:id])
 		@school = School.find(params[:school_id])
@@ -19,8 +20,6 @@ class CoursesController < ApplicationController
 
 	def create
 	end
-
-    
 
 	def update
 	end
