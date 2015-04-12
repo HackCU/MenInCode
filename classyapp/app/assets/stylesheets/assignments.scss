@@ -7,6 +7,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.input_box_assignment { 
+width: 390px; 
+height: 40px; 
+border: 1px solid purple; 
+}
+
+
+#SubmitAssignmentContainer{
+
+
+background: rgba(0, 0, 0, .45);
+width: 700px;
+height: 400px;
+margin-left: 360px;
+overflow-y: scroll;
+}
+
+
+#SubmitAssignmentContent{
+
+
+color: white;
+width: 700px;
+height: 400px;
+margin-left: 100px;
+font-family: AlexandriaFLF;
+font-size: 30px;
+}
+
 
 ul {
     list-style: none;

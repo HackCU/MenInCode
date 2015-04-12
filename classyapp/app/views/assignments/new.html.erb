@@ -1,10 +1,14 @@
 <%= form_for :assignment, url: school_course_assignments_path do |f| %>
+  <div id ="SubmitAssignmentContainer">
+  <div id ="SubmitAssignmentContent">
   <p>
-    <%= f.label :name %><br>
+    <%= f.label "Name of Assignment" %><br>
     <%= f.text_field :name %>
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "New Assignment" %>
   </p>
+  </div>
+  </div>
 <% end %>
