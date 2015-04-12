@@ -17,7 +17,7 @@ class SchoolsController < ApplicationController
 
 	def create
 		@school = School.find_or_create_by(school_params)
-		@course = Course.find_or_create_by(class_params)
+		@course = Course.where(:school_id => @school.id, :name => params[:school][:name]).first_or_create
 		redirect_to [@school, @course]
 	end
 
