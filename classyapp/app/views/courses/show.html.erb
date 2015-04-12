@@ -7,9 +7,13 @@
 
 <div id = "AssignmentsContainer">
 <ul id = "links" >
-		<% @ass.each do |a| %>
-				<li class = "AssignmentElement">-> <%= a.name %></li>
-		<% end %>
+        <% if @ass.length > 0 %>
+            <% @ass.each do |a| %>
+                    <li class = "AssignmentElement"><%= link_to "->" + a.name, controller: 'assignments', action: 'show', id: a.id, course_id: params[:id] %></li>
+            <% end %>
+        <% else %>
+            <li class = "AssignmentElement">No assignments yet! <br> Click New Assignment to get started</li>
+        <% end %>
 </ul>
 </div>
 
