@@ -1,11 +1,16 @@
+<%= javascript_include_tag params[:controller] %>
+
 <ul id = "AssTitles">
 	<li><h3 id = "SchoolNameAssTitle"> <%= @school.short+"-"+@school.city %> > </h3> </li>
 	<li><h3 id = "CourseNameAssTitle"> <%= @course.name %> > </h3></li>
 	<li><h3 id = "AssignmentNameAssTitle"><%= @ass.name %></h3> </li>
 </ul>
 
+<div id="assLeft">
+</div>
 
-	<%= form_for :message, url: messages_path do |f| %>
+<div id="assRight">
+	<%= form_for :message, url: messages_path, remote: true, html: {class: "message_post"} do |f| %>
 	  <p>
 		<%= f.label :text %><br>
 		<%= f.text_area :text %>
@@ -14,6 +19,7 @@
 		<%= f.submit 'Send' %>
 	  </p>
 	<% end %>
+</div>
 
 <%= link_to 'Back to assignment list', controller: 'courses', action: 'show', id: @course %>
 <!-- this si the list of assignments -->

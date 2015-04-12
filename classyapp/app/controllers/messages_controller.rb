@@ -17,9 +17,9 @@ class MessagesController < ApplicationController
 	def create
 		@message = Message.new(params.require(:message).permit(:text))
 		if @message.save
-			render status: 200
+			render json: @message
 		else 
-			render status: 500
+			render json: @message
 		end
 	end
 
