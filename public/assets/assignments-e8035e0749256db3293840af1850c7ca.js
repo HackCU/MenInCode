@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".message_post").on("ajax:success",function(){console.log("success")}).on("ajax:error",function(){console.log("failed")})});

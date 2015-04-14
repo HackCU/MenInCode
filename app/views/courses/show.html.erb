@@ -1,0 +1,25 @@
+<ul id = "CourseTitles">
+     <li><h3 id = "SchoolNameCourseTitle"> <%= @school.short+"-"+@school.city %> >  </h3> </li>
+     <li> <h3 id = "CourseNameCourseTitle"> &nbsp <%= @course.name %> </h3></li>
+</ul>
+    
+
+
+<div id = "AssignmentsContainer">
+<ul id = "links" >
+        <% if @ass.length > 0 %>
+            <% @ass.each do |a| %>
+                    <li class = "AssignmentElement"><%= link_to "> " + a.name, controller: 'assignments', action: 'show', id: a.id, course_id: params[:id] %></li>
+            <% end %>
+        <% else %>
+            <li class = "AssignmentElement">No assignments yet! <br> Click New Assignment to get started</li>
+        <% end %>
+</ul>
+</div>
+
+
+<div id ="NewAssignmentLinkBack">
+<div id ="NewAssignmentLink">
+<%= link_to '+ New Assignment', controller: 'assignments', action: 'new', school_id: params[:school_id], course_id: params[:id] %>
+</div>
+</div>
