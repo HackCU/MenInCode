@@ -10,9 +10,12 @@ color: inherit;
 }
 
 #logo {
-    padding-top: 45px;
-    padding-left: 45px;
-    height: 120px;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    height:18vh;
+    min-width: 10vw;
+    min-height: 10vw;
+    width: 20vw;
     float: left;
 
 }
@@ -20,7 +23,7 @@ color: inherit;
 h2 {
 	font-family: AlexandriaFLF;
     color: black;
-    font-size : 70px;
+    font-size : 4.375em;
     display: inline;
 }
 body {
@@ -28,29 +31,24 @@ body {
     padding:0;
     height:100%;
     }
-#container {
-    
-    min-height:100%;
-    position:relative;
-}
 
 
 #content {
-    margin-left: 400px;
-    margin-top: 120px;
-    overflow:auto;
-    padding-bottom: 50px; /* must be same height as the footer */
-      
+    margin-top: 15vh;
+    margin-left: 25vw;
+    margin-right: 20vw;
+    top: 0vw;
+    height: 80vh;
+    width: 100%
+    padding: 0;      
+
 
 }
 
 #footer {
-    background:#000;
     background: rgba(0,0,0,0.5);
     width:100%;
-    position: relative;
-    height: 70px;
-    clear:both;
+    height: 5vh;
 
 
 }
@@ -59,8 +57,8 @@ body {
     width: 50%;
     margin-bottom: 0px;
     color: white;
-    padding-top: 20px;
-    padding-bottom: 0px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     padding-left: 30%;
     font-size: 14px;
 }
@@ -72,37 +70,33 @@ body {
     
     list-style: none;
     float: left;
+    padding: 20px;
     width: 200px;
     clear: none;
 
 }
 
-
-
-
-
 #intro-description-content {
-    font-size: 18px;
-    font-family: AlexandriaFLF;
-    width: 840px;
+    padding-top: 3vw;
+    padding-right: 3vh;
+    margin-left: 56vw;
+    font-size: 1.125em;
+    font-family:NexaLight;
+    width: 44vw;
     color: black;
-    padding: 10px;
-    left: 300px;
-    margin: 0px;
+
+
 }
 
-
-
 html { 
-	margin: 0;
+	height: 100%;
     padding: 0;
-    height: 100%;
+    margin: 0;
     background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #GRADIENT{
-
 background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,0.5) 90%, rgba(255,255,255,0) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(25%,rgba(255,255,255,1)), color-stop(90%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,0.5) 90%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -110,8 +104,6 @@ background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2
 background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,0.5) 90%,rgba(255,255,255,0) 100%); /* IE10+ */
 background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,0.5) 90%,rgba(255,255,255,0) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-
-
 }
 
 

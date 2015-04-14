@@ -1,25 +1,32 @@
 <%= javascript_include_tag params[:controller] %>
 
-<ul id = "AssTitles">
-	<li><h3 id = "SchoolNameAssTitle"> <%= @school.short+"-"+@school.city %> > &nbsp </h3> </li>
-	<li><h3 id = "CourseNameAssTitle"> <%= @course.name %> > &nbsp </h3></li>
+<ul id = "CourseTitles">
+	<li><h3 id = "SchoolNameCourseTitle"> <%= @school.short+"-"+@school.city %> > &nbsp </h3> </li>
+	<li><h3 id = "CourseNameCourseTitle"> <%= @course.name %> > &nbsp </h3></li>
 	<li><h3 id = "AssignmentNameAssTitle"><%= @ass.name %></h3> </li>
 </ul>
 
 <div id="assLeft">
+
+<div id ="TopPostsTitle"> Top Posts </div>
+
 </div>
 
 <div id="assRight">
-	<%= form_for :message, url: messages_path, remote: true, html: {class: "message_post"} do |f| %>
+	<div id = "ChatTitle"> Chat </div>
+
+    <%= form_for :message, url: messages_path, remote: true, html: {class: "message_post"} do |f| %>
 	  <p>
-		<%= f.label :text %><br>
-		<%= f.text_area :text %>
+		<%= f.label  "" %><br>
+		<%= f.text_field :text, :placeholder => "Enter chat message!!" %>
 	  </p>
 	  <p>
 		<%= f.submit 'Send' %>
 	  </p>
 	<% end %>
 </div>
-
+<div id ="AllAssignmentsLinkBack">
+<div id ="AllAssignmentsLink">
 <%= link_to 'Back to assignment list', controller: 'courses', action: 'show', id: @course %>
-<!-- this si the list of assignments -->
+</div>
+</div>

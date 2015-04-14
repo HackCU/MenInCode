@@ -30,29 +30,21 @@ input {
     
 #submit-stuff-container  {
     background: rgba(255, 255, 255, .45);
-    width: 700px;
+    width: 40vw;
+    padding: 25px;
     float: left;
     margin-left:37px;
 }
 
 #submit-stuff-content {
     font-family: NexaLight;
-    padding: 30px;
+    padding: 0px;
     color: rgba(0,0,0,1);
     font-size: 19px;
     height: 400px;
     
 }
 
-#intro-description-content {
-    padding-top: 45px;
-    padding-right: 45px;
-    margin-left: 900px;
-    font-size: 18px;
-    font-family:NexaLight;
-    width: 700px;
-    color: black;
-    }
 
 #side-bar-container {
     background-color: rgba(0,0,0,0.4);

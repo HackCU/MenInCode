@@ -1,65 +1,57 @@
-a:link {
+alink {
    color:inherit;
     text-decoration: none;
   }
 
 a:hover{
 
-    color: rgba(180, 140, 255,1);
+    color: #5C007A;
 }
-#SchoolNameCourseTitle    {
 
-    margin: 0px;
-    padding: 0px;
+#CourseTitles{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 4vw;
+    margin-bottom: 0;
+    height: 4vw;
+    width: 52vw;
+    font-size: 2em;
     font-family: NexaLight;
-    font-size: 30px;
+    padding: 0px;
+    }
+
+
+
+#SchoolNameCourseTitle    {
     color: #140029;
     float: left;
 }
 
 #CourseNameCourseTitle    {
 
-     margin: 0px;
-    padding: 0px;
-    font-family: NexaLight;
-    font-size: 30px;
     color: #5C007A;
     float: left;
 }
 
 
-#CourseTitles{
-    height: 60px;
-    width: 425px;
-
-}
-
 .AssignmentElement {
 
     font-family: NexaLight;
-    font-size: 22px;
-    padding: 11px;
-    margin-left: 190px;
+    font-size: 1.3em;
+    margin-left: 10vw;
+    padding: 1vh;
     color: black;
 }
 
 
 #AssignmentsContainer {
-background: rgba(255, 255, 255, .35);
-width: 700px;
-float: left;
-margin-left:37px;
+    background: rgba(255, 255, 255, .35);
+    width: 55vw;
+    float: left;
 }
-
-
-
-
 
 #links {
 
-    width: 700px;
-    height: 300px;
-    margin-left: -50px;
     margin-top: 10px; 
     overflow-y: scroll;
 }
@@ -67,19 +59,14 @@ margin-left:37px;
 #NewAssignmentLink {
     
      font-family: NexaLight;
-    font-size: 26px;
+    font-size: 1.2em;
     color: #5C007A;
     margin-left: 10px;
 }
 
-
-
 #NewAssignmentLinkBack {
     
-    margin-top: 290px;
-    height: 35px;
-    float: left;
-    width: 270px;
-    padding-left: 0px;
-    background-color: white;
+ float: left;
+    padding: 5px;
+    background: rgba(255, 255, 255, .75);
 }
