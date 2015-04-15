@@ -10,11 +10,10 @@ a:hover{
 
 #CourseTitles{
     margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 4vw;
+    margin-left: 20vw;
     margin-bottom: 0;
-    height: 4vw;
-    width: 52vw;
+    height: 2vw;
+    width: 92vw;
     font-size: 2em;
     font-family: NexaLight;
     padding: 0px;
@@ -48,25 +47,28 @@ a:hover{
     background: rgba(255, 255, 255, .35);
     width: 55vw;
     float: left;
+    margin-left: 20vw;
 }
 
 #links {
 
+    height: 50vh;
     margin-top: 10px; 
     overflow-y: scroll;
 }
 
 #NewAssignmentLink {
-    
-     font-family: NexaLight;
+
+    font-family: NexaLight;
     font-size: 1.2em;
     color: #5C007A;
-    margin-left: 10px;
 }
 
 #NewAssignmentLinkBack {
-    
- float: left;
+
+    clear: both;
+    margin-left: 20vw;
     padding: 5px;
     background: rgba(255, 255, 255, .75);
+    width: 15vw;
 }

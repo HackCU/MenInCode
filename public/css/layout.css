@@ -4,6 +4,12 @@ src: url("/fonts/AlexandriaFLF-Bold.ttf");
 }
 
 
+p {
+
+    margin: 0px;
+    padding: 0px;
+}
+
 a{
 text-decoration: none;
 color: inherit;
@@ -34,13 +40,14 @@ body {
 
 
 #content {
-    margin-top: 15vh;
-    margin-left: 25vw;
+    margin-top: 25vh;
     margin-right: 20vw;
     top: 0vw;
     height: 80vh;
     width: 100%;
-    padding: 0;     
+    padding: 0;      
+
+
 }
 
 #footer {
@@ -75,12 +82,11 @@ body {
 }
 
 #intro-description-content {
-    padding-top: 3vw;
-    padding-right: 3vh;
-    margin-left: 56vw;
+    margin-top: 6vh;
+    float: right;
     font-size: 1.125em;
     font-family:NexaLight;
-    width: 44vw;
+    width: 40vw;
     color: black;
 
 
@@ -95,6 +101,8 @@ html {
 }
 
 #GRADIENT{
+    height: 100%;
+    overflow: hidden;
 background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,0.5) 90%, rgba(255,255,255,0) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(25%,rgba(255,255,255,1)), color-stop(90%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,0.5) 90%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -103,5 +111,4 @@ background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 
 background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,0.5) 90%,rgba(255,255,255,0) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
-
 
