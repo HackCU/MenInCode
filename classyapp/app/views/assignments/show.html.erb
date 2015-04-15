@@ -1,0 +1,26 @@
+<%= javascript_include_tag params[:controller] %>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+
+<ul id = "AssTitles">
+	<li><h3 id = "SchoolNameAssTitle"> <%= @school.short+"-"+@school.city %> > &nbsp </h3> </li>
+	<li><h3 id = "CourseNameAssTitle"> <%= @course.name %> > &nbsp </h3></li>
+	<li><h3 id = "AssignmentNameAssTitle"><%= @ass.name %></h3> </li>
+</ul>
+
+<div id="assLeft">
+</div>
+
+<div id="assRight">
+	<%= form_for :message, url: messages_path, remote: true, html: {class: "message_post"} do |f| %>
+	  <p>
+		<%= f.label :text %><br>
+		<%= f.text_area :text %>
+	  </p>
+	  <p>
+		<%= f.submit 'Send' %>
+	  </p>
+	<% end %>
+</div>
+
+<%= link_to 'Back to assignment list', controller: 'courses', action: 'show', id: @course %>
+<!-- this si the list of assignments -->
