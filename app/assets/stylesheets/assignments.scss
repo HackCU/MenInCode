@@ -24,6 +24,7 @@ input {
     padding: 7px;
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
+    
 }
 
 
@@ -99,8 +100,25 @@ padding: 0px;
 #AllAssignmentsLink {
 
     font-family: NexaLight;
-    font-size: 1.2em;
-    color: #5C007A;
+    font-size: 1em;
+    color:rgba(160, 120, 255, 1);
+    border: 4px solid rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,100,0,.2),
+            0 0 16px rgba(0,100,0,.2); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,100,0,.2),
+            0 0 16px rgba(0,100,0,.2); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,.2),
+            0 0 16px rgba(0,0,0,.2); 
+    padding: 7px;
+    background: rgba(255,255,255,.7);
+    clear: both;
+    margin-left: 5vw;
+    padding: 5px;
+    width: 13vw;
+        border-radius: 15px;
 }
 
 #AllAssignmentsLinkBack {
