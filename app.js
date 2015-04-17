@@ -4,13 +4,16 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var routes = require('./routes/index');
 
 var app = express();
 var server = require('http').createServer(app);
 var socket = require('socket.io')(server);
-var port = process.env.PORT || 3000;
 
-var routes = require('./routes/index');
+var port = process.env.PORT || 3000;
+var dbstring = process.env.MONGODB || 'mongodb://localhost/classy';
+mongoose.connect(dbstring, function(err, res) {/*ignoring callback for now*/});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
