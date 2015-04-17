@@ -125,6 +125,7 @@ router.post('/:school/:course/new', function(req, res) {
 					result.courses[course_position].asses.push( { name: ass } );
 					result.markModified('result.courses.asses');
 					result.save( function(err) {
+						console.log(result);
 						res.redirect( "/" + school + "/" + course + '/' + ass );
 					});
 				} else {
@@ -135,11 +136,11 @@ router.post('/:school/:course/new', function(req, res) {
 					});
 				}
 			} else {
-				res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
+				res.render("index", { err: "Something with that address wasn't quite right. Please try again!"} );
 			}
 			
 		} else {
-			res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
+			res.render("index", { err: "Something with that address wasn't quite right. Please try again!"} );
 		}
 	});
 	
@@ -147,13 +148,39 @@ router.post('/:school/:course/new', function(req, res) {
 });
 
 /* GET the discussion page for an assignment */
-router.get('/:school/:class/:ass', function(req, res) {
+router.get('/:school/:course/:ass', function(req, res) {
 	var school = req.params.school;
 	var course = req.params.course;
 	var ass = req.params.ass;
 
-	//needs school, course, ass
-	res.render('ass', {school: school, course: course, ass: ass});
+	School.findOne( { name: school }, function(err, result) {
+		if (err) { console.log(err); };
+		if (result) {
+
+			console.log("ass: found result");
+			var course_position = result.courses.map(function(x) {return x.name}).indexOf(course);
+			if (course_position >= 0) {
+				console.log("ass: found course");
+				var ass_position = result.courses[course_position].asses.map(function(x) {return x.name}).indexOf(ass);
+				if (ass_position >= 0) {
+					console.log("ass: found ass");
+					res.render('ass', {
+						school: school,
+						course: result.courses[course_position],
+						ass: result.courses[course_position].asses[ass_position]
+					});
+				} else {
+					res.redirect('/' + school + '/' + course );
+				}
+			} else {
+				res.render("index", { err: "Something with that address wasn't quite right. Please try again!"} );
+			}
+			
+		} else {
+			res.render("index", { err: "Something with that address wasn't quite right. Please try again!"} );
+		}
+	});
+	
 });
 
 /* GET the list of board posts */

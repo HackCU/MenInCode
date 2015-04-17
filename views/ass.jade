@@ -5,20 +5,21 @@ block content
 		li
 			h3#SchoolNameCourseTitle= school
 		li
-			h3#CourseNameCourseTitle= course
+			h3#CourseNameCourseTitle= course.name
 		li
-			h3#AssignmentNameAssTitle= ass
+			h3#AssignmentNameAssTitle= ass.name
 	#assLeft
-		#TopPostsTitle  Top Posts 
+		p#TopPostsTitle Top Posts 
+			
 	#assRight
-		#ChatTitle  Chat 
-		form.message_post(action='/messages', accept-charset='UTF-8', data-remote='true', method='post')
+		#ChatTitle Chat 
+		form.message_post(action='/messages', accept-charset='UTF-8', method='post')
 			p
-				label(for='message_')
+				label(for='message')
 				br
-				input#message_text(placeholder='Enter chat message!!', type='text', name='message[text]')
+				input#message(placeholder='Enter chat message!!', type='text', name='message')
 			p
 				input(type='submit', name='commit', value='Send')
 	#AllAssignmentsLink
-		a(href='/'+school+'/'+course) Back to assignment list
+		a(href='/' + school + '/' + course.name) Back to assignment list
 
