@@ -12,7 +12,7 @@ var server = require('http').createServer(app);
 var socket = require('socket.io')(server);
 
 var port = process.env.PORT || 3000;
-var dbstring = process.env.MONGODB || 'mongodb://localhost/classy';
+var dbstring = process.env.MONGODB || 'mongodb://asdf:asdfasdfasdfasdfasdf@ds061651.mongolab.com:61651/heroku_app35948223';
 mongoose.connect(dbstring, function(err, res) {/*ignoring callback for now*/});
 
 // view engine setup
