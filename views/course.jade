@@ -5,12 +5,12 @@ block content
 		li
 			h3#SchoolNameCourseTitle= school
 		li
-			h3#CourseNameCourseTitle= course
+			h3#CourseNameCourseTitle= course.name
 
 		#AssignmentsContainer
 			ul#links
-				if asses
-					each ass in asses
+				if course.asses
+					each ass in course.asses
 						li.AssignmentElement
 							a(href="something")= ass.name
 				else
@@ -19,5 +19,5 @@ block content
 						br
 						| Click New Assignment to get started
 		#NewAssignmentLink
-			a(href='/'+school+'/'+course+'/new') + New Assignment
+			a(href='/'+school+'/'+course.name+'/new') + New Assignment
 

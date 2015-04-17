@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	#SubmitAssignmentContainer
+		#SubmitAssignmentContent
+			form(action='/' + school + '/' + course.name + '/new', accept-charset='UTF-8', method='post')
+				p
+					label(for='ass_name') Name of assignment:
+					br
+					input#ass_name(type='text', name='ass_name')
+				p
+					input(type='submit', name='commit', value='Create')
+
