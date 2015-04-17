@@ -1,5 +1,23 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome
+	#submit-stuff-container
+		#submit-stuff-content
+			h3 To begin, enter school acronym, city, and course ID 
+			form(action='/gotoclass', accept-charset='UTF-8', method='post')
+				p
+					label(for='school_school') School
+					br
+					input#school_short(type='text', name='school[short]')
+				p
+					label(for='school_city') City
+					br
+					input#school_city(type='text', name='school[city]')
+				p
+					label(for='school_course') Course
+					br
+					input#school_name(type='text', name='school[name]')
+				p
+				#submit_button
+					input(type='submit', name='commit', value='Enter')
+

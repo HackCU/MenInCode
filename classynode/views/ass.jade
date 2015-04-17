@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	ul#AssCourseTitles
+		li
+			h3#SchoolNameCourseTitle= school
+		li
+			h3#CourseNameCourseTitle= course
+		li
+			h3#AssignmentNameAssTitle= ass
+	#assLeft
+		#TopPostsTitle  Top Posts 
+	#assRight
+		#ChatTitle  Chat 
+		form.message_post(action='/messages', accept-charset='UTF-8', data-remote='true', method='post')
+			p
+				label(for='message_')
+				br
+				input#message_text(placeholder='Enter chat message!!', type='text', name='message[text]')
+			p
+				input(type='submit', name='commit', value='Send')
+	#AllAssignmentsLink
+		a(href='/'+school+'/'+course) Back to assignment list
+

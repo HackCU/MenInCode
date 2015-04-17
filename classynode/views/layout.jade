@@ -1,7 +1,13 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+
+html(style='background-image: url(/images/bgs/black.png);')
+	head
+		title We So Classy
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		#GRADIENT
+			a(href='/')
+				img#logo(src='/images/wsc.svg')
+			p#intro-description-content  Chat with your classmates - Connect and Colloborate - Create a Community  
+			#content
+				block content
