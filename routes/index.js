@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var School = require('../school.model');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -8,10 +9,52 @@ router.get('/', function(req, res) {
 
 /* POST transition to class page */
 router.post('/gotoclass', function(req, res) {
-	//do fuzzy logic here for class
 
-	//if successful, needs school and course object
-	res.redirect('/school/course');
+	//do fuzzy logic here for class
+	var school = req.body.school_name.toLowerCase();
+	var city = req.body.school_city.toLowerCase();
+	var squish = school + "-" + city;
+	var course = req.body.school_course.toLowerCase();
+
+	School.findOne( { name: squish }, function(err, result) {
+		if (err) {console.log("gotoclass: error finding school");}
+		if (result) {
+
+			console.log("gotoclass: found result");
+
+			//find course in the courses array, ret -1 if not found
+			var course_position = result.courses.map(function(x) {return x.name}).indexOf(course);
+			if ( course_position < 0 ) {
+				console.log("gotoclass: course not found");
+				result.courses.push( { name: course } );
+				result.markModified('result.courses');
+				result.save( function(err) {
+					console.log("gotoclass: course created");
+					res.redirect( "/" + squish + "/" + course );
+				})
+			} else {
+				console.log("gotoclass: course already existed");
+				res.redirect( "/" + squish + "/" + course );
+			}
+		
+
+		} else {
+
+			console.log("gotoclass: creating new course");
+			var new_school = new School({
+				name: squish,
+				courses: [{ 
+					name: course
+				}]
+			})
+			new_school.save( function(err) {
+				if (err) {console.log("gotoclass: error saving new_school");}
+				res.redirect( "/" + squish + "/" + course );
+			})
+
+		}
+	});
+	
 });
 
 /* GET list of assignments for the course */
@@ -19,13 +62,87 @@ router.get('/:school/:course', function(req, res) {
 	var school = req.params.school;
 	var course = req.params.course;
 
-	//needs school, course, and asses objects
-	res.render('course', {school: school, course: course});
+	School.findOne( { name: school }, function(err, result) {
+		if (err) { console.log(err); };
+		if (result) {
+
+			var course_position = result.courses.map(function(x) {return x.name}).indexOf(course);
+			if (course_position >= 0) {
+				res.render('course', {
+					school: school,
+					course: result.courses[course_position]
+				});
+			} else {
+				res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
+			}
+			
+		} else {
+			res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
+		}
+	})
+
 });
 
 router.get('/:school/:course/new', function(req, res) {
 	var school = req.params.school;
 	var course = req.params.course;
+
+	School.findOne( { name: school }, function(err, result) {
+		if (err) { console.log(err); };
+		if (result) {
+
+			var course_position = result.courses.map(function(x) {return x.name}).indexOf(course);
+			if (course_position >= 0) {
+				res.render('new_ass', {
+					school: school,
+					course: result.courses[course_position]
+				});
+			} else {
+				res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
+			}
+			
+		} else {
+			
+		}
+	});
+
+});
+
+/* POST make new assignment */
+router.post('/:school/:course/new', function(req, res) {
+	var school = req.params.school;
+	var course = req.params.course;
+	var ass = req.body.ass_name.toLowerCase();
+
+	School.findOne( { name: school }, function(err, result) {
+		if (err) { console.log(err); };
+		if (result) {
+
+			var course_position = result.courses.map(function(x) {return x.name}).indexOf(course);
+			if (course_position >= 0) {
+				var ass_position = result.courses[course_position].asses.map(function(x) {return x.name}).indexOf(ass);
+				if (ass_position < 0) {
+					result.courses[course_position].asses.push( { name: ass } );
+					result.markModified('result.courses.asses');
+					result.save( function(err) {
+						res.redirect( "/" + school + "/" + course + '/' + ass );
+					});
+				} else {
+					res.render('new_ass', {
+						school: school,
+						course: result.courses[course_position],
+						err: "That assignment already exists!"
+					});
+				}
+			} else {
+				res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
+			}
+			
+		} else {
+			res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
+		}
+	});
+	
 
 });
 
