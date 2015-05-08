@@ -1,23 +1,23 @@
 extends layout
 
 block content
-	#submit-stuff-container
-		#submit-stuff-content
-			h3 To begin, enter school acronym, city, and course ID 
-			form(action='/gotoclass', accept-charset='UTF-8', method='post')
-				p
-					label(for='school_name') School Acronym
-					br
-					input#school_name(type='text', name='school_name')
-				p
-					label(for='school_city') City
-					br
-					input#school_city(type='text', name='school_city')
-				p
-					label(for='school_course') Course
-					br
-					input#school_course(type='text', name='school_course')
-				p
-				#submit_button
-					input(type='submit', value='Enter')
+  #submit-stuff-container
+    #submit-stuff-content
+      h3 To begin, enter school acronym, city, and course ID 
+      form(action='/gotoclass', accept-charset='UTF-8', method='post')
+        p
+          label(for='school_name') School Acronym
+          br
+          input#school_name(type='text', name='school_name')
+        p
+          label(for='school_city') City
+          br
+          input#school_city(type='text', name='school_city')
+        p
+          label(for='school_course') Course
+          br
+          input#school_course(type='text', name='school_course')
+        p
+          #submit_button
+          input(type='submit', value='Enter')
 
