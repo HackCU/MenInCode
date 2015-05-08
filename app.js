@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var routes = require('./routes/index');
 
+var stylus = require('stylus');
+var nib = require('nib');
+
 var app = express();
 var server = require('http').createServer(app);
 var socket = require('socket.io')(server);
@@ -15,16 +18,30 @@ var port = process.env.PORT || 3000;
 var dbstring = process.env.MONGODB || 'mongodb://asdf:asdfasdfasdfasdfasdf@ds061651.mongolab.com:61651/heroku_app35948223';
 mongoose.connect(dbstring, function(err, res) {/*ignoring callback for now*/});
 
+// Set up for stylus/nib
+function compile(str, path) {
+  return stylus(str)
+    .set('filename', path)
+    .use(nib())
+}
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
-app.use(favicon());
+app.set('view options', {layout: true});
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// Set up for stylus
+
+app.use(stylus.middleware(
+  { src: __dirname + '/public'
+  , compile: compile
+  }
+))
+
+app.use(express.static(__dirname + '/public'));
 
 app.use('/', routes);
 
