@@ -4,7 +4,7 @@ var School = require('../school.model');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index');
+  res.render('index', {cssFile: 'welcome' });
 });
 
 /* POST transition to class page */
@@ -70,7 +70,8 @@ router.get('/:school/:course', function(req, res) {
 			if (course_position >= 0) {
 				res.render('course', {
 					school: school,
-					course: result.courses[course_position]
+					course: result.courses[course_position],
+                    cssFile: 'courses' 
 				});
 			} else {
 				res.redirect("/", { err: "Something with that address wasn't quite right. Please try again!"} );
